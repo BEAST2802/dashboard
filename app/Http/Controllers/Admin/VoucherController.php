@@ -151,7 +151,7 @@ class VoucherController extends Controller
             'code' => __('You already redeemed this voucher code')
         ]);
 
-        if ($request->user()->credits + $voucher->credits >= 99999999) throw ValidationException::withMessages([
+        if ($request->user()->credits + $voucher->credits >= 9999999999) throw ValidationException::withMessages([
             'code' => "You can't redeem this voucher because you would exceed the  limit of " . CREDITS_DISPLAY_NAME
         ]);
 
